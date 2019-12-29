@@ -1,19 +1,27 @@
 #include<iostream>
 #include<stdlib.h>
 #include<process.h>
+#include<string>
 using namespace std;
-class tourism{
+class tourism{       //class for introduction to Kota and classification of tourist attractions
 public:
     void intro();
     void tourist_attractions();
 
 };
+class list{  //Abstract class
+protected:
+    string timings;  //string datatype from string header file
+    int entry_fee;
+public:
+    virtual void display()=0;  //Pure Virtual function
+    };
 void tourism::intro()
 {
     cout<<"With history, culture, cuisine, nature and heritage, Kota has a lot on offer for your perusal."
     " The desert city cites an attractive historical beginning and has seen a lot of valour, majesty,"
-    " courtliness and grandeur, etching India’s glorious monarchy. Proud Rajput kings once ruled over western"
-    " India adding to this country’s glory and richness. Kota is within the Hadoti region located in the south"
+    " courtliness and grandeur, etching Indiaâ€™s glorious monarchy. Proud Rajput kings once ruled over western"
+    " India adding to this countryâ€™s glory and richness. Kota is within the Hadoti region located in the south"
     " eastern part of Rajasthan. The River Chambal cools the town as it flows through it. In the 17th century"
     " Kota region a section of Hadoti was gifted to Madho Singh a deserving prince, and Kota attained the"
     " prestigious Rajput hallmark of gallantry and Rajputana culture.\n The best time to visit Kota is from October to March"<<endl<<endl;
@@ -29,7 +37,7 @@ void tourism::tourist_attractions()
     cout<<"5. Lakes & Waterfalls"<<endl;
 }
 
-class forts_and_palaces
+class forts_and_palaces:public list  //Hierarchical inheritance
 { public:
     void display()
     {
@@ -56,8 +64,10 @@ class forts_and_palaces
         "heritage of the bygone splendid days."<<endl<<endl;
         cout<<"It is 5 km from city center"<<endl<<endl;
         cout<<"Popular for: History Buffs & Experience Seekers"<<endl<<endl;
-        cout<<"Timings: All days of the week 10:00 AM - 5:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : INR 10 per person"<<endl<<endl;
+        timings="All days of the week; 10:00 AM - 5:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=10;
+        cout<<"Entry Fee : INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around City Palace: \n Sahkari Bazaar \n Chambal River Cruise \n Chopati Bazzar \n Sawan Puhar Waterpark \n Central Square Mall"<<endl<<endl;
         cout<<"Restaurants near City Palace: "<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -77,6 +87,16 @@ void JagmandirPalace()
         " rulers of Kota, with the pristine waters of Kishore Sagar Lake inviting scores of tourists to the same."<<endl<<endl;
         cout<<"4 km from city center"<<endl<<endl;
         cout<<"Popular for: History Buffs, God Lovers and Photo Fanatics"<<endl<<endl;
+        timings="All days of the week; 10:00 AM - 6:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=325;
+        cout<<"Entry Fee:\n INR "<<entry_fee<<" per person Adult(for 1 hour boat ride)"<<endl;
+        entry_fee=165;  //reassignment of entry fee
+        cout<<" INR "<<entry_fee<<" per person Child(for 1 hour boat ride)"<<endl;
+        entry_fee=225;
+        cout<<" INR "<<entry_fee<<" per person Adult(for 30-minute boat ride)"<<endl;
+        entry_fee=115;
+        cout<<" INR "<<entry_fee<<" per person Child(for 30-minute boat ride)"<<endl<<endl;
         cout<<"Things to do around Jagmandir Palace:\n Central Square Mall \n Swarn Rajat Market \n Jawahar Market"<<endl<<endl;
         cout<<"Restaurants near Jagmandir Palace:\n";
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -92,8 +112,11 @@ void RanijiKiBaoli()
     "arched on the high roof. A flight of stairs descend into a part well, part temple and part palace with scarce "
     "water reserves. Raniji Ki Baoli is an important heritage monument of the city."<<endl<<endl;
     cout<<"It is 34 km from city center."<<endl<<endl;
-    cout<<"Entry Fee: Free"<<endl<<endl;
     cout<<"Popular for: Historic Places"<<endl<<endl;
+    timings="All days of the week; 10:00 AM - 5:00 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=0;
+    cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
     cout<<"Things to do near Raniji ki Baoli: \n Aquagreens Waterpark \n City Mall \n Radhika Resort and Waterpark \n Ahluwalias's The Great Mall of Kota"<<endl<<endl;
     cout<<"Restaurants near Raniji ki Baoli:\n";
     cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -112,8 +135,12 @@ void AbhedaMahal()
         " palace has a great architecture and is a perfect place for picnic and for photography. The palace image falls on the "
         "water in the pond which reflects it's image which gives a great view."<<endl<<endl;
         cout<<"Popular for: History Buffs"<<endl<<endl;
-        cout<<"Timings: All days of the week 10:00 AM - 5:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : \n For Indians: Rs 20/- per head \n For Foreign Nationals: Rs 40/- per head"<<endl<<endl;
+        timings="All days of the week; 10:00 AM - 5:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=20;
+        cout<<"Entry Fee : \n For Indians: INR "<<entry_fee<<"/- per head "<<endl;
+        entry_fee=40;
+         cout<<" For Foreign Nationals: INR "<<entry_fee<<"/- per head"<<endl<<endl;
         cout<<"Things to do around Abheda Mahal: \n Lakshman Jhoola \n Purana Cinema Hall \n Hanuman Mandir "<<endl<<endl;
         cout<<"Restaurants near Abheda Mahal: "<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -131,8 +158,12 @@ void UmedBhawan()
         "The palace has 32 huge rooms replete with modern amenities. Umed Bhawan Palace strikes a stark balance with "
         "contemporary living and Rajasthan's culture."<<endl<<endl;
         cout<<"Popular for: Architectural and historical heritage"<<endl<<endl;
-        cout<<"Timings: All days of the week 9:00 AM - 5:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : \n For Indians: Rs 30/- per person \n For foreigners: Rs 100/- per person"<<endl<<endl;
+        timings="All days of the week; 9:00 AM - 5:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=30;
+        cout<<"Entry Fee : \n For Indians: INR "<<entry_fee<<"/- per head "<<endl;
+        entry_fee=100;
+         cout<<" For Foreign Nationals: INR "<<entry_fee<<"/- per head"<<endl<<endl;
         cout<<"Things to do around Umed Bhawan: \n Kotsa- Travellers Gallery \n Ganesh Handicrafts \n Baba Art Emporium \n Rao Jodha Desert Rock Park"<<endl<<endl;
         cout<<"Restaurants near Umed Bhawan: "<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -144,7 +175,7 @@ void UmedBhawan()
 }
 
 };
-class gardens
+class gardens:public list //Hierarchical inheritance
 {
 public:
     void display()
@@ -169,16 +200,17 @@ public:
      " Development Department."<<endl<<endl;
      cout<<"Ranked 2 out of many sightseeing in Kota"<<endl<<endl;
      cout<<"Situated in: Ballabhbari"<<endl<<endl;
-     cout<<"Entry fee: free"<<endl<<endl;
-     cout<<"Opening Hours: 2:00 PM"<<endl<<endl;
-     cout<<"Closing Hours: 10.00 PM"<<endl<<endl;
+     timings="All days of the week; 2:00 PM - 8:30 PM";
+     cout<<"Timings: "<<timings<<endl<<endl;
+     entry_fee=0;
+     cout<<"Entry fee: INR "<<entry_fee<<endl<<endl;
      cout<<"Best time to visit: During sunset"<<endl<<endl;
      cout<<"Facilities available: Food available for purchase, bathroom facilities, camera allowed"<<endl<<endl;
      cout<<"Restaurants near Seven Wonder's Park:\n"<<endl;
-    cout<<"\t\tName\t\t\t\tAddress"<<endl;
-    cout<<"\tThe Right Place Cafe\t\tC-11, Vallabh Bari Opposite 7 Wonders Park"<<endl;
-    cout<<"\tIndish Resto And Cafe\t\t72 Shopping Centre, Opposite Of Rotary Binani Sabhagar"<<endl;
-    cout<<"\tSheesha Restaurant\t\tKotri Rd Police Chowki, Gumanpura"<<endl<<endl;
+     cout<<"\t\tName\t\t\t\tAddress"<<endl;
+     cout<<"\tThe Right Place Cafe\t\tC-11, Vallabh Bari Opposite 7 Wonders Park"<<endl;
+     cout<<"\tIndish Resto And Cafe\t\t72 Shopping Centre, Opposite Of Rotary Binani Sabhagar"<<endl;
+     cout<<"\tSheesha Restaurant\t\tKotri Rd Police Chowki, Gumanpura"<<endl<<endl;
 }
 void ChambalGardens()
 {
@@ -190,8 +222,10 @@ void ChambalGardens()
     "specific regions of the landscaped beauty. Chambal Garden has also been featured in a Hollywood Blockbuster,"
     " 'Badrinath ki Dulhaniya'."<<endl<<endl;
     cout<<"It is 7 km from city center."<<endl<<endl;
-    cout<<"Entry fee: INR 0"<<endl<<endl;
-    cout<<"Timings: 10:00AM to 7:00 PM"<<endl<<endl;
+    timings="All days of the week; 10:00 AM - 7:00 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=0;
+    cout<<"Entry fee: INR "<<entry_fee<<endl<<endl;
     cout<<"Major attractions at Chambal Garden:\n"<<endl;
     cout<<"Children's play area- \n A special play area is a favourite amongst children which has several,"
     " rides, slides, swings and a jungle gym. There is also a suspension bridge that the kids love a lot."<<endl;
@@ -217,9 +251,13 @@ void Zoo()
     "avifauna like the Brahminy eagle, lark, woodpecker, cuckoo, owl etc. Kota Zoological Park is understood for its "
     "unspoiled green surroundings.October-March is the quality season for visiting this zoological park as it's miles "
     "the period whilst the weather is appropriate and the animals welcome their babies."<<endl<<endl;
-     cout<<"Timings: All days of the week (except Tuesday) 9:00 AM - 6:30 PM"<<endl<<endl;
-    cout<<"Entry Fee : \n For Indians: Rs 20/- per head \n For Foreign Nationals: Rs 40/- per head"<<endl<<endl;
     cout<<"Popular for: Picnic, Photography, Safari etc."<<endl<<endl;
+    timings="All days of the week (except Tuesday); 9:00 AM - 6:30 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=20;
+    cout<<"Entry Fee : \n For Indians: INR "<<entry_fee<<"/- per head "<<endl;
+    entry_fee=40;
+    cout<<" For Foreign Nationals: INR "<<entry_fee<<"/- per head"<<endl<<endl;
 }
 void ChatraVilas()
 {
@@ -230,6 +268,10 @@ void ChatraVilas()
     "is preferred by many domestic and international tourists. The lawn is a primary appeal to historians and college "
     "students too as one could recognize approximately the records of the region and various rulers of Kota at "
     "exclusive eras."<<endl<<endl;
+    timings="All days of the week; 10:00 AM - 5:00 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=10;
+    cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
     cout<<"Things to do around Chatra Vilas Garden:\n Saiman Plaza \n Ghoomar Beer Bar \n Gma Plaza Market \n Central Square mall"<<endl<<endl;
     cout<<"Restaurants near Chatra Vilas Garden:\n";
     cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -245,8 +287,12 @@ void Darrah()
    " species. The sanctuary is mostly popular for wildlife safaris, treks and sightseeing. Initially it was used as"
    " a hunting ground by the Royal families."<<endl<<endl;
    cout<<"Its is 0 km from city center"<<endl<<endl;
-    cout<<"Timings : 7:00 AM - 5:00 PM"<<endl<<endl;
-    cout<<"Entry Fee : Indians - INR 20 Foreigners - INR 100"<<endl<<endl;
+    timings="All days of the week 7:00 AM - 5:00 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=20;
+    cout<<"Entry Fee : \n For Indians: INR "<<entry_fee<<"/- per head "<<endl;
+    entry_fee=100;
+    cout<<" For Foreign Nationals: INR "<<entry_fee<<"/- per head"<<endl<<endl;
 }
 
 void LuckyBurj()
@@ -258,12 +304,16 @@ void LuckyBurj()
     "location for evenings to go for picnics or to go for a walk. The garden is protected with lush green plant "
     "life and colorful owers. The garden is bustling in the course of weekends, traffic can experience the view, "
     "taste local cuisines and make the ride to the lawn memorable."<<endl<<endl;
-    cout<<"Timings: All days of the week 8:00 AM - 8:30 PM"<<endl<<endl;
-    cout<<"Entry Fee : \n For Indians: Rs 10/- per head \n For Foreign Nationals: Rs 20/- per head"<<endl<<endl;
     cout<<"Popular for: Picnic, Photography, etc."<<endl<<endl;
+    timings="All days of the week 8:00 AM - 8:30 PM";
+    cout<<"Timings: "<<timings<<endl<<endl;
+    entry_fee=10;
+    cout<<"Entry Fee : \n For Indians: INR "<<entry_fee<<"/- per head "<<endl;
+    entry_fee=20;
+    cout<<" For Foreign Nationals: INR "<<entry_fee<<"/- per head"<<endl<<endl;
 }
 };
-class temples
+class temples:public list   //Hierarchical inheritance
 {
 public:
     void display()
@@ -288,9 +338,11 @@ public:
         " The presence of several peacocks and other avian species attract a lot of birdwatchers and photography "
         "buffs. Considered to be the best place to relax and unwind, the vantage point is surely a must- visit."<<endl<<endl;
         cout<<"It is 17 km from city centre."<<endl<<endl;
-        cout<<"Entry fee: INR 0"<<endl<<endl;
         cout<<"Photography and Videography charges: INR 50"<<endl<<endl;
-        cout<<"Timings: 5:00 AM to 7PM"<<endl<<endl;
+        timings="All days of the week 5:00 AM - 7:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Popular for: God Lovers and Nirvana Seekers"<<endl<<endl;
         cout<<"Things to do around Garadia Mahadev Temple:\n Chambal River Cruise \n Mahaveer Dharamshala Market \n Sawan Puhar Waterpark \n Central Square mall"<<endl<<endl;
         cout<<"Restaurants near Garadia Mahadev Temple:\n";
@@ -309,9 +361,11 @@ public:
         "at one place. The place is thronged by pilgrims and devotees all through the year; however, the busiest "
         "time of the year is Shivratri or Rasleela. Between the shivalingas, there is a huge statue of God Pashupati Nath."<<endl<<endl;
         cout<<"It is 6 km from city center."<<endl<<endl;
-        cout<<"Timings : 24 hours"<<endl<<endl;
-        cout<<"Entry Fee : No entry fee"<<endl<<endl;
-         cout<<"Popular for: God Lovers"<<endl<<endl;
+        cout<<"Popular for: God Lovers"<<endl<<endl;
+        timings="All days of the week 24 hours";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Shivpuri Dham:\n Lodha Market \n City Mall \n Z Cine Mall \n Central Square mall"<<endl<<endl;
         cout<<"Restaurants near Shivpuri Dham:\n";
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -331,8 +385,10 @@ public:
        "and goddesses including Lord Shiva, Bhairav, Ganpati etc."<<endl<<endl;
        cout<<"It is 8 km from city center"<<endl<<endl;
        cout<<"Popular for: God Lovers"<<endl<<endl;
-       cout<<"Timings: All days of the week 7:00 AM - 8:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : No entry fee"<<endl<<endl;
+        timings="All days of the week 7:00 AM - 8:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Godavri Dham Temple:\n New Motor Market \n Central Square Mall \n Lakshmi Narayan Market \n Saiman Plaza"<<endl<<endl;
         cout<<"Restaurants near Godavri Dham Temple:\n";
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -349,8 +405,10 @@ public:
         " Pandavas when they visited Kota during their exile. The temple is built just right by River Chambal and is"
         " also known as Karneshwar Temple."<<endl<<endl;
         cout<<"It is 8 km from city center."<<endl<<endl;
-        cout<<"Timings : 6:00 AM - 7:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : No entry fee"<<endl<<endl;
+        timings="All days of the week 6:00 AM - 7:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
     }
     void KhadeGanesh()
     {
@@ -361,6 +419,10 @@ public:
         "about this temple is that Ganesh's idol is in standing pose, which is supposed to be the only standing idol of Ganesh"
         " in India."<<endl<<endl;
         cout<<"It is 12 km from city center."<<endl<<endl;
+        timings="All days of the week 5:00 AM - 7:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Khade Ganesh Ji Temple:\n Vishwakarma Market \n Pandya Groups City Mall \n Z Cine Mall \n Azad Market"<<endl<<endl;
         cout<<"Restaurants near Khade Ganesh Ji Temple:\n";
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -371,7 +433,7 @@ public:
     }
 
 };
-class museums
+class museums:public list   //Hierarchical inheritance
 {
 public:
     void display()
@@ -390,7 +452,10 @@ public:
         "findings, documents, coins and other valuable exhibits. One of the most prominent exhibit is the statue "
         "brought from Baroli. Photography is prohibited."<<endl<<endl;
         cout<<"It is 3 km from city center"<<endl<<endl;
-        cout<<"Timings : 10:00 AM - 5:00 PM Closed on Monday"<<endl<<endl;
+        timings="All days of the week(except Monday) 10:00 AM - 5:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=10;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Government Museum:\n Swarn Rajat Market \n New Cloth Market \n Central Square Mall \n Saiman Plaza"<<endl<<endl;
         cout<<"Restaurants near Government Museum:\n"<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -408,8 +473,12 @@ public:
         "and tourists alike. The museum sprawls over two storeys in several galleries."<<endl<<endl;
         cout<<"It is 5km from city center."<<endl<<endl;
         cout<<"Popular for: History Buffs"<<endl<<endl;
-        cout<<"Timings : 10:00 AM - 5:00 PM"<<endl<<endl;
-        cout<<"Entry Fee : Lower Section: INR 10 Upper Section: INR 50"<<endl<<endl;
+        timings="All days of the week 10:00 AM - 5:00 PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=10;
+        cout<<"Entry Fee: Lower Section: INR "<<entry_fee<<endl;
+        entry_fee=50;
+        cout<<"Entry Fee: Upper Section: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Rao Madho Singh Museum: \n Kalawati Paliwal Market \n Central Square Mall \n Saiman Plaza \n New Motor Market"<<endl<<endl;
         cout<<"Restaurants near Rao Madho Singh Museum:\n";
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -418,7 +487,7 @@ public:
         cout<<"\tRoyal Firdous Restaurant\t\tSH 51, Dhanmandi, Kota, Rajasthan, India"<<endl<<endl;
 }
 };
-class lakes_and_waterfalls
+class lakes_and_waterfalls:public list   //Hierarchical inheritance
 {
 public:
     void display()
@@ -437,6 +506,10 @@ public:
         " Prince Dehra Deh. It located by the side of attractive Brij Vilas palace museum."<<endl<<endl;
         cout<<"4 km from city center"<<endl<<endl;
         cout<<"Popular for: Nature Lovers & Photo Fanatics"<<endl<<endl;
+        timings="All days of the week 6:00AM - 9:00PM";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=10;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Things to do around Kishore Sagar Lake:\n Gma Plaza Market \n New Sarafa Market \n Central Square Mall \n Blue Sea Bar"<<endl<<endl;
         cout<<"Restaurants near Kishore Sagar Lake:\n"<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
@@ -454,8 +527,10 @@ public:
         " monsoons when the rains refurbish the water reserves and you can experience the cascading falls in all its"
         " glory. You can also take a dip in the freshwater at the base."<<endl<<endl;
         cout<<"It is 7 km from city center"<<endl<<endl;
-        cout<<"Entry Fee : No entry fee"<<endl<<endl;
-        cout<<"Timings : 24 hours"<<endl<<endl;
+        timings="All days of the week 24 hours";
+        cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Popular for: Nature Lovers & Photo Fanatics"<<endl<<endl;
         cout<<"Things to do around Gaipernath Waterfall:\n Gma Plaza Market \n Swarn Rajat Market \n Central Square Mall \n Saiman Plaza"<<endl<<endl;
         cout<<"Restaurants near Gaipernath Waterfall:\n"<<endl;
@@ -476,8 +551,10 @@ public:
       "evening time gathering. You will find people in couples or groups standing along the railings enjoying the view "
       "and spending quality time with their family and loved ones."<<endl<<endl;
       cout<<"It is 6 km from city center."<<endl<<endl;
-      cout<<"Timings : 24 hours"<<endl<<endl;
-        cout<<"Entry Fee : No entry fee"<<endl<<endl;
+      timings="All days of the week 24 hours";
+      cout<<"Timings: "<<timings<<endl<<endl;
+        entry_fee=0;
+        cout<<"Entry Fee: INR "<<entry_fee<<endl<<endl;
         cout<<"Restaurants near Kota Barrage:\n"<<endl;
         cout<<"\t\tName\t\t\t\tAddress"<<endl;
         cout<<"\tMaheshwari Restaurant\t\t384,Rajeev Ghandi Nagar, Kota, Rajasthan, India"<<endl;
@@ -546,7 +623,7 @@ int main()
    t.intro();
    t.tourist_attractions();
    do{
-   cout<<"\nSelect your choice (Enter 0 to exit): ";
+   cout<<"\nSelect your choice (Enter 0 to exit): ";  //Choice out the mentioned tourist attractions
    cin>>c;
    cout<<endl;
    switch(c)
@@ -555,8 +632,8 @@ int main()
 
        case 1: fp.display();
                 do{cout<<"Which place would you like to visit?\nEnter your choice (Enter 0 to go back): ";
-                cin>>ch;
-                switch(ch)
+                cin>>ch;    //Choice out of the mentioned Forts and Palaces
+                switch(ch)  //Nested switch case
                 {
                     case 0: system("cls"); t.tourist_attractions(); break;
                     case 1: fp.CityPalace();
@@ -579,7 +656,7 @@ int main()
                 break;
        case 2: g.display();
                do{cout<<"Which place would you like to visit?\nEnter your choice (Enter 0 to go back): ";
-                cin>>ch;
+                cin>>ch;  //Choice out of the mentioned Gardens
                 switch(ch)
                 {
                    case 0: system("cls"); t.tourist_attractions(); break;
@@ -606,7 +683,7 @@ int main()
                break;
        case 3: temp.display();
                do{cout<<"Which place would you like to visit?\nEnter your choice (Enter 0 to go back): ";
-                cin>>ch;
+                cin>>ch;   //Choice out of the mentioned Temples
                 switch(ch)
                 {
                     case 0: system("cls"); t.tourist_attractions(); break;
@@ -630,7 +707,7 @@ int main()
                break;
        case 4: m.display();
                do{cout<<"Which place would you like to visit?\nEnter your choice (Enter 0 to go back): ";
-                cin>>ch;
+                cin>>ch;  //Choice out of the mentioned museums
                 switch(ch)
                 {
                     case 0: system("cls"); t.tourist_attractions(); break;
@@ -645,7 +722,7 @@ int main()
                break;
        case 5: lw.display();
                do{cout<<"Which place would you like to visit?\nEnter your choice (Enter 0 to go back): ";
-                cin>>ch;
+                cin>>ch;  //Choice out of the mentioned lakes and waterfalls
                 switch(ch)
                 {
                     case 0: system("cls"); t.tourist_attractions(); break;
