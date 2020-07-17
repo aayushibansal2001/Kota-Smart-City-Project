@@ -13,19 +13,19 @@ The four modules are:
 ## In Action
 Snapshot of module 1 i.e Housing
 
-![Module1 - Housing](module1 - housing)
+![Module1 - Housing](module1 - housing.jpg)
 
 Snapshot of module 2 i.e Tourism
 
-![Module2 - Tourism](module2 - tourism)
+![Module2 - Tourism](module2 - tourism.jpg)
 
 Snapshot of module 3 i.e Education
 
-![Module3 - Education](module3 - Education)
+![Module3 - Education](module3 - Education.jpg)
 
 Snapshot of module 4 i.e Job Seeker
 
-![Module4 - Job Seeker](module4 - Job Seeker)
+![Module4 - Job Seeker](module4 - Job Seeker.jpg)
 
 
 ## Team Members
