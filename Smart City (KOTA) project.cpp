@@ -24,8 +24,8 @@ void tourism::intro()
 {
     cout<<"With history, culture, cuisine, nature and heritage, Kota has a lot on offer for your perusal."
     " The desert city cites an attractive historical beginning and has seen a lot of valour, majesty,"
-    " courtliness and grandeur, etching India’s glorious monarchy. Proud Rajput kings once ruled over western"
-    " India adding to this country’s glory and richness. Kota is within the Hadoti region located in the south"
+    " courtliness and grandeur, etching Indiaâ€™s glorious monarchy. Proud Rajput kings once ruled over western"
+    " India adding to this countryâ€™s glory and richness. Kota is within the Hadoti region located in the south"
     " eastern part of Rajasthan. The River Chambal cools the town as it flows through it. In the 17th century"
     " Kota region a section of Hadoti was gifted to Madho Singh a deserving prince, and Kota attained the"
     " prestigious Rajput hallmark of gallantry and Rajputana culture.\n The best time to visit Kota is from October to March"<<endl<<endl;
@@ -44,8 +44,7 @@ void tourism::tourist_attractions()
 class forts_and_palaces:public list  //Hierarchical inheritance
 { public:
     void display()
-    {
-        system("cls");            //It refreshes the screen and clears the terminal.
+    {            //It refreshes the screen and clears the terminal.
         cout<<"FORTS AND PALACES IN KOTA"<<endl;
         cout<<"1. Kotah Garh City Palace"<<endl;
         cout<<"2. Jagmandir Palace"<<endl;
@@ -184,7 +183,6 @@ class gardens:public list //Hierarchical inheritance
 public:
     void display()
     {
-        system("cls");
         cout<<"GARDENS IN KOTA"<<endl;
         cout<<"1. Seven Wonders Park"<<endl;
         cout<<"2. Chambal Gardens"<<endl;
@@ -322,7 +320,6 @@ class temples:public list   //Hierarchical inheritance
 public:
     void display()
     {
-        system("cls");
         cout<<"TEMPLES IN KOTA"<<endl;
         cout<<"1. Garadia Mahadev Temple"<<endl;
         cout<<"2. Shivpuri Dham"<<endl;
@@ -442,7 +439,6 @@ class museums:public list   //Hierarchical inheritance
 public:
     void display()
     {
-        system("cls");
         cout<<"MUSEUMS IN KOTA"<<endl;
         cout<<"1. Brij Vilas Palace Government Museum"<<endl;
         cout<<"2. Rao Madho Singh Museum"<<endl;
@@ -496,7 +492,6 @@ class lakes_and_waterfalls:public list   //Hierarchical inheritance
 public:
     void display()
     {
-        system("cls");
         cout<<"LAKES AND WATERFALLS IN KOTA"<<endl;
         cout<<"1. Kishore Sagar Lake"<<endl;
         cout<<"2. Gaipernath Waterfall"<<endl;
@@ -629,8 +624,8 @@ class housing                 //in Kota city//
 {
  protected:
    char name[30];
-   long int adhaarno;
-   long int phone;
+   long long int adhaarno;
+   long long int phone;
  public:
    char room_type[30];
    int days;
@@ -875,7 +870,7 @@ class resume
  public:
    char name[30];
    int age;
-   int phone;
+   long long int phone;
    void input()
     {
       cout<<endl<<"Enter name, age and contact number: ";
@@ -1016,7 +1011,7 @@ class student
 {
     protected:
                 char name[30];
-                int mobileno;
+                long long int mobileno;
                 int age;
                 char city[30];
                 char email[50];
@@ -1132,7 +1127,7 @@ class courses:public institutes
             cout<<"-->Chapter Practice Problems (CPP)"<<endl;
             cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
             cout<<"-->Success Potential Index (SPI"<<endl;
-            cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+            cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
             cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
             cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
             cout<<"DURATION :"<<endl;
@@ -1150,7 +1145,7 @@ class courses:public institutes
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1168,7 +1163,7 @@ class courses:public institutes
     cout<<"-->Chapter Practice Problems (CPP)"<<endl;
     cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
     cout<<"-->Success Potential Index (SPI"<<endl;
-    cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+    cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
     cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
     cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
     cout<<"DURATION :"<<endl;
@@ -1186,7 +1181,7 @@ else  if(strcmp(names,"PINNACLE1")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1204,7 +1199,7 @@ else if  (strcmp(names,"PINNACLE2")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1222,7 +1217,7 @@ else  if(strcmp(names,"PINNACLE3")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1240,7 +1235,7 @@ else  if(strcmp(names,"PINNACLE3")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1258,7 +1253,7 @@ else  if(strcmp(names,"ROCKSTAR")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1278,7 +1273,7 @@ else  if(strcmp(names,"ROCKSTAR")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1296,7 +1291,7 @@ else  if(strcmp(names,"SHIKSHA2")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1315,7 +1310,7 @@ else  if(strcmp(names,"SHIKSHA3")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1334,7 +1329,7 @@ else  if(strcmp(names,"SHIKSHA4")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
@@ -1352,7 +1347,7 @@ else  if(strcmp(names,"MEDDI")==0)
         cout<<"-->Chapter Practice Problems (CPP)"<<endl;
         cout<<"-->Class Learning Improvement Program (CLIP)"<<endl;
         cout<<"-->Success Potential Index (SPI"<<endl;
-        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a ‘feel’ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
+        cout<<"-->Students also gain important exam practice through quizzes, phase tests, & mock tests (conducted in a simulated environment giving the students a â€˜feelâ€™ of the real exam) that can help them improve their examination temperament a necessary element for success in any competitive exam"<<endl;
         cout<<"-->Regular feedback & Test Analysis Sessions."<<endl;
         cout<<"-->Dedicated academic operations team provides feedback at any point of time apart from scheduled parent teacher meetings."<<endl;
         cout<<"DURATION :"<<endl;
