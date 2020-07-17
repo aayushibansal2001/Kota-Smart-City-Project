@@ -1,2 +1,12 @@
 # Kota-Travel-Guide
-An Insight into KOTA(Rajasthan) Tourism
+An Insight into KOTA(Rajasthan) smart city.
+
+This is a smart city project targeting the Kota city of Rajasthan, India and it is made purely in c++. It is made keeping in mind the four important modules which are required when someone travels to another city. 
+
+The four modules are:
+1. Housing
+2. Tourism
+3. Education
+4. Job Seeker
+
+
